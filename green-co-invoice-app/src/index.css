@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+  .scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+
+  .scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrolling-wrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .card-container {
+    width: 100%;
+    /* text-align: center; */
+  }
+
+  .card-inner {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 3px;
+    width: 100%;
+  }
+
+  .card {
+    display: inline-block;
+    height: 400px;
+    margin: 0 auto;
+    width: 85%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 15px 25px;
+  }
+
+  .content {
+    height: calc(100vh - 80px) !important;
+  }
+
+  .position-middle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #FFFF00;
+    padding: 10px;
+  }
+
+  #invoice-row-1 {
+    height: 60px;
+  }
+
+  #invoice-row-2 {
+    height: 180px;
+  }
+
+  #invoice-row-3 {
+    height: 100px;
+  }
+
+  #invoice-row-4 {
+    height: 40px;
+  }
+
+  .divisor-sm {
+    height: 20px;
+  }
+
+  .divisor-lg {
+    height: 50px;
+  }
+
+  .invoice-row-lg {
+    height: 115px;
+  }
+
+  #invoice-badge {
+    padding-top: 5px;
+  }

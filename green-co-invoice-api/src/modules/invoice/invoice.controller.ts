@@ -3,7 +3,6 @@ import {
   CacheKey,
   Get,
   Post,
-  Body,
 } from '@nestjs/common';
 import { InvoiceDto } from './invoice.dto';
 import { InvoiceService } from './invoice.service';
@@ -12,16 +11,16 @@ import { InvoiceService } from './invoice.service';
 export class InvoiceController {
   constructor(private invoiceService: InvoiceService) {}
 
+  // get invoices by cpf
   @Get('/')
   @CacheKey('green-co-invoices')
-  async index(): Promise<Array<InvoiceDto>> {
-    return this.invoiceService.getAll();
+  async index(cpf: string): Promise<Array<InvoiceDto>> {
+    return this.invoiceService.getAllByCpf(cpf);
   }
-
-  @Post()
-  async create(@Body() invoiceDto: InvoiceDto) {
+  // generate invoices by consumption
+  @Post('/generate')
+  async generateInvoice(): Promise<void> {
     // TODO: add invoice
-    //
-
+    return this.invoiceService.generatedInvoice();
   }
 }

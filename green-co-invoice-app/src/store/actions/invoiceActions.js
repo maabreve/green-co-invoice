@@ -10,7 +10,7 @@ export function loadInvoices() {
   return function(dispatch) {
     dispatch(beginApiCall());
     return invoiceApi
-      .getInvoices()
+      .getInvoices('000000')
       .then(invoices => {
         dispatch(loadInvoicesSuccess(invoices));
       })
